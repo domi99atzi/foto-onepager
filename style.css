@@ -1,0 +1,192 @@
+/* css/style.css (Variante – deutlich anderes Look & Layout) */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #E3E3E3;
+  font-family: Bahnschrift, "Segoe UI", Arial, sans-serif;
+  color: #1f1f1f;
+}
+ 
+/* Header/Hero */
+.hero {
+  background: #f3f3f3;
+  border-bottom: 6px solid #007baf;
+}
+ 
+.hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px 18px 10px 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+ 
+.kicker {
+  margin: 0 0 4px 0;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0b6a90;
+}
+ 
+.hero h1 {
+  margin: 0;
+  font-family: "Calisto MT", "Times New Roman", serif;
+  font-size: 28px;
+  color: #0b6a90;
+}
+ 
+.subtitle {
+  margin: 6px 0 0 0;
+  font-size: 13px;
+}
+ 
+.logo {
+  width: 90px; /* größer als bei dir */
+  height: auto;
+  margin-top: 2px;
+}
+ 
+/* Navigation: als Buttons statt Leiste */
+.nav {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px 18px 16px 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+ 
+.nav a {
+  background: #007baf;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 7px 10px;
+  border-radius: 6px;
+}
+ 
+.nav a:hover { text-decoration: underline; }
+ 
+/* Content */
+.wrap {
+  padding: 18px 0 28px 0;
+}
+ 
+.card {
+  width: 980px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #d2d2d2;
+  padding: 16px 18px 56px 18px;
+  position: relative;
+}
+ 
+.text {
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+ 
+/* Galerie oben: 1 großes + 2 gestapelt */
+.gallery-top {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
+  align-items: start;
+  margin: 10px 0 14px 0;
+}
+ 
+.gallery-top img {
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid #cfcfcf;
+  display: block;
+}
+ 
+.stack {
+  display: grid;
+  gap: 14px;
+}
+ 
+.h2 {
+  margin: 6px 0 10px 0;
+  font-family: "Calisto MT", "Times New Roman", serif;
+  font-size: 18px;
+  color: #0b6a90;
+}
+ 
+/* Aktivitäten als Tiles */
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 14px 0;
+}
+ 
+.tile {
+  background: #f5f5f5;
+  border: 1px solid #d7d7d7;
+  padding: 10px 10px;
+}
+ 
+.tile h3 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #0b6a90;
+  font-family: "Calisto MT", "Times New Roman", serif;
+}
+ 
+.tile p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.35;
+}
+ 
+/* Galerie unten: 3 gleichmäßig */
+.gallery-bottom {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+}
+ 
+.gallery-bottom img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  border: 1px solid #cfcfcf;
+  display: block;
+}
+ 
+.cta {
+  margin: 10px 0 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: #0b6a90;
+  font-weight: 700;
+}
+ 
+/* Pfeil nach oben */
+.to-top {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+ 
+.to-top img {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+ 
+/* Responsiv */
+@media (max-width: 760px) {
+  .gallery-top { grid-template-columns: 1fr; }
+  .tiles { grid-template-columns: 1fr; }
+  .gallery-bottom { flex-direction: column; align-items: center; }
+  .gallery-bottom img { max-width: 100%; }
+}
